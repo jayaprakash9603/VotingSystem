@@ -1,0 +1,29 @@
+## Authentication
+
+The system requires users to authenticate before casting their votes. The authentication is done through
+ the `castvote-authenticate` endpoint, which takes the user's name, username, and password as parameters.
+
+### Sample Code
+
+```java
+private boolean isValidUser(String username, String password) {
+    for (User user : lstUsers) {
+        if (user.getName().equals(username) && user.getPassword().equals(password)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+@PostMapping("/castvote-authenticate")
+public int castVoteAuthenticated(@RequestParam String name, @RequestParam String username, @RequestParam String userpassword) {
+    if (isValidUser(username, userpassword)) {
+        return votingService.castVote(name, username, userpassword);
+    } else {
+        // Handle authentication failure
+        return -1;
+    }
+}
+
+we can get this api using 
+http://localhost:8080//castvote-authenticate
