@@ -146,6 +146,29 @@ http POST http://localhost:8080/castvote?name=ajay
 }
 ```
 
+## OUTPUT
+
+### 1. Enter Candidate
+
+![Enter Candidate photo](Result-images/enter-candidate.jpeg)
+
+### 2. Casting Vote
+
+![Cast Vote photo](Result-images/cast-vote.jpeg)
+
+### 3. Count Vote
+
+![Count Vote Photo](Result-images/count-vote.jpeg)
+
+### 4. List Votes
+
+![List Votes Photo](Result-images/list-vote.jpeg)
+
+### 5. Get Winner
+
+![Get Winner Photo](Result-images/get-winner.jpeg)
+...
+
 ## References
 
 - [Spring Data - Reference Documentation](http://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
